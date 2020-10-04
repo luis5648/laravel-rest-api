@@ -40,7 +40,7 @@ Route::put('articles/{id}', function(Request $request, $id){
 
 Route::delete('article/id', function($id){
   Article::find($id)->delete();
-  return 204;  //codigo de oc
+  return 204;
 });
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
@@ -48,6 +48,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 /*
+routes for laravel 5
 Route::get('articles', 'ArticleController@index');
 Route::get('articles/{article}', 'ArticleController@show');
 Route::post('articles', 'ArticleController@store');
